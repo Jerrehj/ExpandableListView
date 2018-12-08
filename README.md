@@ -15,6 +15,14 @@ java.lang.Object
 
 ## **Code Example**
 
+your code should come out looking like the following pciture.
+
+![outputExpandableListview](jerrehj.github.com/ExpandableListView/img/outputExpandableListview.jpg)
+
+## **Motivation**
+This project exists as a method of teahing other the uses af a ExpandableListView as well as how easy it is to create.
+
+## **Installation**
 ### **Place in Activity_Main.xml**
 
         <ExpandableListView
@@ -201,61 +209,72 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
-    }
+       }
 
 #### **ExpandableListviewdata class**
 
  public static class ExpandableListViewData {
         public static HashMap<String, List<String>> getData() {
             HashMap<String, List<String>> expandableListDetail = new HashMap<String, List<String>>();
-
+              // These are what keyw show up when you click "Xbox Exclusives" 
             List<String> Xbox = new ArrayList<String>();
             Xbox.add("Halo");
             Xbox.add("Gears of War");
             Xbox.add("Cuphead");
             Xbox.add("Tomb Raider");
             Xbox.add("Sea of Thieves");
-
+              // These are what keyw show up when you click "Ps4 Exclusives"
             List<String> Ps4 = new ArrayList<String>();
             Ps4.add("God of War");
             Ps4.add("Spiderman");
             Ps4.add("horizon Zero Dawn");
             Ps4.add("The Last of Us");
             Ps4.add("Bloodbourne");
-
+              // These are what keyw show up when you click "Switch Exclusives"
             List<String> Switch = new ArrayList<String>();
             Switch.add("Let's Go Pikachu/Eevee");
             Switch.add("Zelda Breath of the Wild");
             Switch.add("Splatoon");
             Switch.add("Super Mario Odyssey");
             Switch.add("Bayonetta 2");
-
+              // The titles for the list view, they will be seen before anthing else
             expandableListDetail.put("Xbox Exclusives", Xbox);
             expandableListDetail.put("Ps4 Exclusives", Ps4);
             expandableListDetail.put("Switch Exclusives", Switch);
             return expandableListDetail;
         }
     }
-} 
+   } 
 
-your code should come out looking like the following pciture.
-
-![outputExpandableListview](jerrehj.github.com/ExpandableListView/img/outputExpandableListview.jpg)
-
-## **Motivation**
-A short description of the motivation behind the creation and maintenance of the project. This should explain why the project exists.
-
-## **Installation**
-Provide code examples and explanations of how to get the project.
-
-## **API Reference**
-Depending on the size of the project, if it is small and simple enough the reference docs can be added to the README. For medium size to larger projects it is important to at least provide a link to where the API reference docs live.
+## **major methods/attributes**
+ there are many important attributes some of which are:
+ * android:childDivider: Which is the drawable or color of the child's divider the height of which is the same as a normal list item divider 
+ * android:childIndicator: The indicator beside the child view 
+ * android:childIndicatorEnd: The end indicator for child 
+ * android:childIndicatorLeft: The left indicator for child 
+ * android:childIndicatorRight: The right indicator for child 
+ * android:childIndicatorStart: The start indicator for child 
+ * android:groupIndicator: Indicator beside the group view and android:indicatorStart:
+ * android:indicatorEnd: The end indicator for item
+ * android:indicatorLeft: The left indicator for item
+ * android:indicatorRight:  The right indicator for item 
+ * android:indicatorStart: The start indicator for item 
+ 
+ and the important methods are:
+ 
+ * collapseGroup: Collaspes a group in list view
+ * expandGroup: Expands a group in list view(there are two one returns boolean the other returns animate)
+ * getAccessibilityClassName: Returns the name of the class object for acessibility purposes
+ * getSelectedId: Gets the Id of selected child or group
+ * getExpandableListAdapter: Gets the adapter that provides data to the view
+ * getExpandableListPosition: Converts flat list position to a child or group position
+ * getFlatListPosition: Converts child or group posiiton to a flat list position
+ * getPackedPositionChild: Gets he child position from PACKED_POSITION_TYPE_CHILD
+ * getPackedPositionForChild: Returns packed postion that represents a child position
+ * getPackedPositionForGroup: Returns the packed position that represents a group postion 
+ * getPackedPositionType: Gets the type of a packed postion
 
 ## **Tests**
-Describe and show how to run the tests with code examples.
+it's importnat to know that you cannot use wrap_content properly for android:layout_height with ExpandableListviews xmls if the parent to this view does not have a specified size due to that size being on any length if you want to use wrap-content ensure the parent has a size. The aforementioned ExpandableListViewData object matchs header stings with the children strings in this case it matches video games with their console, this is important as its where the keys/options come from when you click on your choice of the first three elements. CustomExpandableListview class provides MainActivity with data from the ExpandableListViewData class and extends the BaseExpandableListAdapter and overrides the methods in the base class to provide the view for the ExpandableListViewData. list_items.xml,list_group.xml and acvtivity_main.xml are the layouts for the views.
 
-## **Contributors**
-Let people know how they can dive into the project, include important links to things like issue trackers, irc, twitter accounts if applicable.
 
-## **License**
-A short snippet describing the license (MIT, Apache, etc.)

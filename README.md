@@ -18,11 +18,14 @@ java.lang.Object
 
 your code should come out looking like the following picture.
 
-![outputExpandableListview](jerrehj.github.com/ExpandableListView/img/outputExpandableListview.jpg)
+![outputexpandablelistview](https://user-images.githubusercontent.com/44241497/49681133-b5e59700-fa6a-11e8-96ee-9115f1ee8973.PNG)
 
 it should be able to expand and collaspe with the child elements as shown.
 
-![outputExpandableListview](jerrehj.github.com/ExpandableListView/img/outputExpandableListview.jpg)
+![outputexpandablelistviewclosed](https://user-images.githubusercontent.com/44241497/49681134-b5e59700-fa6a-11e8-9b6f-18adb0068647.PNG)
+
+![outputexpandablelistviewhalf](https://user-images.githubusercontent.com/44241497/49681135-b67e2d80-fa6a-11e8-9bd3-884a839518ba.PNG)
+
 
 ## **Motivation**
 This project exists as a method of teaching other the uses of an ExpandableListView as well as how easy it is to create. I believe this will provide a useful tool in creating list views and is easy to understand.

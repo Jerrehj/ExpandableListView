@@ -19,8 +19,12 @@ your code should come out looking like the following pciture.
 
 ![outputExpandableListview](jerrehj.github.com/ExpandableListView/img/outputExpandableListview.jpg)
 
+it should be able to expand and collaspe with the child elements as shown.
+
+![outputExpandableListview](jerrehj.github.com/ExpandableListView/img/outputExpandableListview.jpg)
+
 ## **Motivation**
-This project exists as a method of teahing other the uses af a ExpandableListView as well as how easy it is to create.
+This project exists as a method of teahing other the uses af a ExpandableListView as well as how easy it is to create. I belive this will provide a useful tool in creating listsview and is easy to understand.
 
 ## **Installation**
 ### **Place in Activity_Main.xml**
@@ -211,7 +215,7 @@ public class MainActivity extends AppCompatActivity {
         });
        }
 
-#### **ExpandableListviewdata class**
+#### **ExpandableListviewdata Class**
 
  public static class ExpandableListViewData {
         public static HashMap<String, List<String>> getData() {
@@ -246,7 +250,7 @@ public class MainActivity extends AppCompatActivity {
     }
    } 
 
-## **major methods/attributes**
+## **Major Methods/Attributes**
  there are many important attributes some of which are:
  * android:childDivider: Which is the drawable or color of the child's divider the height of which is the same as a normal list item divider 
  * android:childIndicator: The indicator beside the child view 
@@ -273,8 +277,14 @@ public class MainActivity extends AppCompatActivity {
  * getPackedPositionForChild: Returns packed postion that represents a child position
  * getPackedPositionForGroup: Returns the packed position that represents a group postion 
  * getPackedPositionType: Gets the type of a packed postion
+ etc
+ 
+ there is only one protected method being dispatchDraw which is called by draw to draw the child's view
 
 ## **Tests**
-it's importnat to know that you cannot use wrap_content properly for android:layout_height with ExpandableListviews xmls if the parent to this view does not have a specified size due to that size being on any length if you want to use wrap-content ensure the parent has a size. The aforementioned ExpandableListViewData object matchs header stings with the children strings in this case it matches video games with their console, this is important as its where the keys/options come from when you click on your choice of the first three elements. CustomExpandableListview class provides MainActivity with data from the ExpandableListViewData class and extends the BaseExpandableListAdapter and overrides the methods in the base class to provide the view for the ExpandableListViewData. list_items.xml,list_group.xml and acvtivity_main.xml are the layouts for the views.
+it's importnat to know that you cannot use wrap_content properly for android:layout_height with ExpandableListviews xmls if the parent to this view does not have a specified size due to that size being on any length if you want to use wrap-content ensure the parent has a size. The aforementioned ExpandableListViewData object matchs header stings with the children strings in this case it matches video games with their console, this is important as its where the keys/options come from when you click on your choice of the first three elements. CustomExpandableListview class provides MainActivity with data from the ExpandableListViewData class and extends the BaseExpandableListAdapter and overrides the methods in the base class to provide the view for the ExpandableListViewData. list_items.xml, list_group.xml and acvtivity_main.xml are the layouts for the views.
+
+## **API And Other Reference**
+Depending on the size of the project, if it is small and simple enough the reference docs can be added to the README. For medium size to larger projects it is important to at least provide a link to where the API reference docs live.
 
 
